@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title></title>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>CronaMeter</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
@@ -22,57 +22,15 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="/"><strong>Covid-19 Cases</strong> <span class="sr-only">(current)</span></a>
-         <a class="nav-link" href="/condition"><strong>Current Situation</strong></a>
-         <a class="nav-link" href="/preventation"><strong>Preventation</strong></a>
+         <a class="nav-link" href="/condition"><strong>Current Situation</strong></a><a class="nav-link" href="/preventation"><strong>Preventation</strong></a>
   </div>
 </nav>
 <div class="container">
-  <div class="jumbotron" id="jumbotron" style="margin-top: 100px;">
-    <canvas id="myChart" width="400" height="400"></canvas>
-  </div>
+  
+    <img src="./public_msg.png" style="margin-top: 50px;" class="img-fluid rounded float-left">
 </div>
 
-<script>
-var ctx = document.getElementById('myChart').getContext('2d');
-var ctx = document.getElementById('myChart');
-// For a pie chart
-var myChart = new Chart(ctx, {
-    type: 'bar',
-     data: {
-        labels: ['Confirm Cases','Recovery', 'Crictical', 'Deaths', 'Cases in 24HR', 'Deaths in 24HR'],
-        datasets: [{
-            label: 'Covid-19 Cases',
-            data: [972, 6, 5, 7, 80,1],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
-</script>
+
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

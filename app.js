@@ -11,4 +11,10 @@ app.get('/condition', (req, res) => {
     });
 });
 
+app.get('/preventation', (req, res) => {
+    fs.readFile(__dirname + '/public/preventation.html', 'utf8', (err, text) => {
+        res.send(text);
+    });
+});
+
 app.listen(process.env.PORT || 5000);
