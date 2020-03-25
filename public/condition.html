@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title></title>
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>CronaMeter</title>
@@ -21,14 +21,14 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/"><strong>Covid-19 Cases</strong><span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/"><strong>Covid-19 Cases</strong> <span class="sr-only">(current)</span></a>
          <a class="nav-link" href="/condition"><strong>Current Situation</strong></a>
   </div>
 </nav>
 <div class="container">
-    <div class="jumbotron" id="jumbotron" style="margin-top: 100px;">
-        <canvas id="myChart" width="400" height="400"></canvas>
-    </div>
+  <div class="jumbotron" id="jumbotron" style="margin-top: 100px;">
+    <canvas id="myChart" width="400" height="400"></canvas>
+  </div>
 </div>
 
 <script>
@@ -38,10 +38,10 @@ var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
     type: 'bar',
      data: {
-        labels: ['Sindh', 'Punjab', 'Balochistan', 'KP', 'GB', 'Islamabad'],
+        labels: ['Confirm Cases','Recovery', 'Crictical', 'Deaths', 'Cases in 24HR', 'Deaths in 24HR'],
         datasets: [{
             label: 'Covid-19 Cases',
-            data: [407, 281, 110, 78, 80, 15],
+            data: [972, 6, 5, 7, 80,1],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
