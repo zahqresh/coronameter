@@ -5,9 +5,9 @@ const covid = require('novelcovid');
 const axios = require('axios');
 var exphbs  = require('express-handlebars');
 var bodyParser = require('body-parser');
-//fetch data
-
+var cors = require('cors');
 //setup view engine
+app.use(cors());
 app.engine('.hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');
 app.use(express.static(__dirname+'/public'));
