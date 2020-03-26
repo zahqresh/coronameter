@@ -1,4 +1,1 @@
-.gitignore
-/node_modules
-/public
-/Procfile
+node_modules
