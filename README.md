@@ -20,4 +20,3 @@ To run this project, install it locally by cloning the repo or download the zip 
 $ npm intall
 $ node app.js
 ```
-
