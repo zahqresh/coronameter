@@ -1,5 +1,6 @@
 const express  = require('express');
 var app = express();
+var path = require('path');
 var fs = require('fs');
 const covid = require('novelcovid');
 const axios = require('axios');
@@ -10,7 +11,7 @@ var cors = require('cors');
 app.use(cors());
 app.engine('.hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');
-app.use(express.static(__dirname+'/public'));
+app.use(express.static(path.join(__dirname,"public")));
 //setup bodyparser
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
