@@ -16,6 +16,9 @@ app.use(express.static(__dirname+'/public'));
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
+//downtime index route
+
+
 app.use(bodyParser.json())
 app.get('/',(req,res)=>{
 	axios.get('https://corona.lmao.ninja/countries/pakistan')
@@ -27,8 +30,11 @@ app.get('/',(req,res)=>{
   })
   .catch(function (error) {
     console.log(error);
+    res.send('<h1 style="font-size:700%;">Working on an update!!! will be back soon! 🤗</h1><br><p>Meanwhile <a href="https://bit.ly/2JhB4kG">Follow</a> me for updates</p> ')
   });
 });
+
+
 //routes to render pages
 app.get('/world', (req, res) => {
 	res.render('global');
