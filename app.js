@@ -49,7 +49,7 @@ app.get('/about',(req,res)=>{
 //post request
 app.post('/world',(req,res)=>{
 	let country = req.body.search;
-	axios.get(`https://corona.lmao.ninja/countries/${country}`)
+	axios.get(`https://corona.lmao.ninja/countries/${country}`,{timeout:2})
   .then(function (response) {
 
     res.render('global',{
@@ -73,6 +73,8 @@ app.get('/worldwide',(req,res)=>{
     console.log(error);
   });
 });
+
+
 
 
 
