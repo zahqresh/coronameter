@@ -50,9 +50,9 @@ app.get('/about',(req,res)=>{
 //post request
 app.post('/world',(req,res)=>{
 	let country = req.body.search;
-	axios.get(`https://corona.lmao.ninja/countries/${country}`,{timeout:2})
+	axios.get(`https://corona.lmao.ninja/countries/${country}`)
   .then(function (response) {
-
+console.log(response.data)
     res.render('global',{
     	data:response.data
     })
