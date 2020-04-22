@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json())
 app.get('/',(req,res)=>{
-	axios.get('https://corona.lmao.ninja/countries/pakistan')
+	axios.get('https://corona.lmao.ninja/v2/countries/pakistan')
   .then(function (response) {
 
     res.render('index',{
@@ -50,9 +50,8 @@ app.get('/about',(req,res)=>{
 //post request
 app.post('/world',(req,res)=>{
 	let country = req.body.search;
-	axios.get(`https://corona.lmao.ninja/countries/${country}`)
+	axios.get(`https://corona.lmao.ninja/v2/countries/${country}`)
   .then(function (response) {
-console.log(response.data)
     res.render('global',{
     	data:response.data
     })
@@ -64,7 +63,7 @@ console.log(response.data)
 
 //worldide route
 app.get('/worldwide',(req,res)=>{
-	axios.get('https://corona.lmao.ninja/all')
+	axios.get('https://corona.lmao.ninja/v2/all')
   .then(function (response) {
     res.render('total',{
     	data:response.data
@@ -76,7 +75,19 @@ app.get('/worldwide',(req,res)=>{
 });
 
 
+ app.get('/hist',(req,res)=>{
+   axios.get('https://corona.lmao.ninja/v2/historical/pakistan')
+  .then(function (response) {
 
+    
+    res.render('historical',{
+      data:response.data
+    })
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+ })
 
 
 app.listen(process.env.PORT || 5000);
